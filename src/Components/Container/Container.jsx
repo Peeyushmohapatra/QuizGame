@@ -58,7 +58,7 @@ const Container = () => {
         {start && (
           <div className="dataContainer">
             <div className="scoreContainer">
-              <h3>Question No : {questionNumber+1}</h3>
+              <h3>Question No : {questionNumber + 1}</h3>
             </div>
             <div className="heading">
               <h3>Quiz</h3>
@@ -75,7 +75,7 @@ const Container = () => {
                     setShowAns(true);
                   }}
                 >
-                  A: {questions[questionNumber].opt1}
+                  {questions[questionNumber].opt1}
                 </h3>
               </div>
               <div className="option">
@@ -87,7 +87,7 @@ const Container = () => {
                     setShowAns(true);
                   }}
                 >
-                  B: {questions[questionNumber].opt2}
+                  {questions[questionNumber].opt2}
                 </h3>
               </div>
               <div className="option">
@@ -99,7 +99,7 @@ const Container = () => {
                     setShowAns(true);
                   }}
                 >
-                  C: {questions[questionNumber].opt3}
+                  {questions[questionNumber].opt3}
                 </h3>
               </div>
               <div className="option">
@@ -111,7 +111,7 @@ const Container = () => {
                     setShowAns(true);
                   }}
                 >
-                  D: {questions[questionNumber].opt4}
+                  {questions[questionNumber].opt4}
                 </h3>
               </div>
 
@@ -127,24 +127,29 @@ const Container = () => {
         {!start && (
           <div className="scoreShow">
             <div>
-              <h1 style={{color:"lightgoldenrodyellow"}}>Score Card</h1>
+              <h1 style={{ color: "lightgoldenrodyellow" }}>Score Card</h1>
             </div>
-            <h2 style={{color:"white"}}>
+            <h2 style={{ color: "white" }}>
               Total Questions : <span>{questions.length}</span>
             </h2>
-            <h2 style={{color:"green"}}>
+            <h2 style={{ color: "green" }}>
               Right Answer : <span>{rightAns}</span>
             </h2>
-            <h2 style={{color:"red"}}>
+            <h2 style={{ color: "red" }}>
               Wrong Answer Is : <span>{wrongAns}</span>
             </h2>
-            <h2 style={{color:"rebeccapurple"}}>
+            <h2 style={{ color: "rebeccapurple" }}>
               Your OverAll Percentage Is : <span>{percentage()} %</span>
             </h2>
-            <button onClick={() =>{
-              setStart(true)
-              setQuestionNumber(0)
-            }} className="playAgain">Play Again!</button>
+            <button
+              onClick={() => {
+                setStart(true);
+                setQuestionNumber(0);
+              }}
+              className="playAgain"
+            >
+              Play Again!
+            </button>
           </div>
         )}
       </div>
