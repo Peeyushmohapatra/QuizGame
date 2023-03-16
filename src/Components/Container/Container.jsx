@@ -145,6 +145,8 @@ const Container = () => {
               onClick={() => {
                 setStart(true);
                 setQuestionNumber(0);
+                setRightAns(0);
+                setWrongAns(0);
               }}
               className="playAgain"
             >
